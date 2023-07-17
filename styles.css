@@ -10,7 +10,8 @@
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100% 100% 100% 75%;
+    grid-template-rows: auto auto auto 70% auto;
+    box-sizing: border-box;
 }
 /*The first block*/
 .div-one{
@@ -20,6 +21,7 @@
     background-color: hsl(351,86%, 96%);
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 nav{ 
     width: auto;
@@ -30,6 +32,7 @@ nav{
     justify-content: space-between;
     font-size: 10px;
     flex-grow: 1;
+    box-sizing: border-box;
 }
 .div-one-content{
     width: 100%;
@@ -53,7 +56,6 @@ nav{
 .content-b{
     height: auto;
     width: 100%;
-    /* padding: 4% 4% 7% 0%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +65,7 @@ nav{
 .content-item{
     height: auto;
     padding: 2% 5%;
+    box-sizing: border-box;
 }
 .a-text-one{
     width: auto;
@@ -112,6 +115,7 @@ div.a-buttons{
     height: auto;
     width: 100%;
     padding: 4% 4% 7% 0%;
+    box-sizing: border-box;
 }
 .div-two{
     grid-area: 2/1/3/2;
@@ -124,26 +128,27 @@ div.a-buttons{
     width: 100%;
     padding: 4%;
 }
-#div-two-content-b{
+#div-two-content-b, #div-two-content-a{
     flex-grow: 0;
     align-items: auto;
     justify-content: auto;
 }
-.div-two-text-one{
+.div-text-one{
     height: auto;
     width: auto;
     padding: 2% 5%;
     color: darkblue;
     font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
 }
-.div-two-text-two{
+.div-text-two{
     height: auto;
     width: auto;
     padding: 2% 5%;
     font-family: 'PT Sans', sans-serif;
     font-size: 40px;
 }
-.div-two-text-three{
+.div-text-three{
     height: auto;
     width: auto;
     padding: 2% 5%;
@@ -158,7 +163,7 @@ div.a-buttons{
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
     color: gray;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 .div-two-button{
     height: auto;
@@ -169,52 +174,190 @@ div.a-buttons{
     grid-area: 3/1/4/2;
     height: 100%;
     width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.div-three-text-four{
+    height: auto;
+    width: 100%;
+    padding: 2% 5%;
+    display: flex;
+}
+.grad-logo{
+    height: auto;
+    width: 40%;
+    padding: 3%;
+}
+.text-four-text{
+    height: auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+    font-size: 13px;
+    font-family: 'PT Sans', sans-serif;
+}
+#image-three{
+    height: auto;
+    width: 100%;
+    padding: 4%;
+}
+.div-four{
+    grid-area: 4/1/5/2;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(125deg,hsl(240,100%,70%), blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 10%;
+}
+#div-four-text-one{
+    color: white;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#div-four-text-two{
+    color: hsl(0, 0%, 60%);
+    height: auto;
+    width: auto;
+    text-align: center;
+    line-height: 1.9;
+    margin-bottom: 5%;
+}
+.div-four-button{
+    border-color: white;
+    color: white;
+}
+.div-five{
+    grid-area: 5/1/6/2;
+    height: auto;
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+}
+form{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#search-input{
+    border: 1px solid grey;
+    border-radius: 6px;
+    width: 73%;
+    height: 30px;
+}
+#search-button{
+    width: 25%;
+    height: 30px;
+    border: 0px transparent grey;
+    border-radius: 6px;
+    background-image: linear-gradient(125deg,hsl(240,100%,70%), blue);
+    color: white;
 }
 
 /* Mobiles */
-@media screen and (min-width: 360px){
-    @media screen and (min-height: 780px){
-        .a-text-one{
-            font-size: 65px;
-        }
-        .a-text-two, .button, nav{
-            font-size: 15px;
-        }
-    }
-}
-@media screen and (min-width: 480px){
+@media screen and (min-width: 360px) and (min-height: 780px){
     .a-text-one{
         font-size: 65px;
-        line-height: 1.0;
     }
     .a-text-two, .button, nav{
-        font-size: 18px;
+        font-size: 15px;
     }
 }
-@media screen and (min-width: 360px) and (max-width: 414px){
-    .maindiv{
-        grid-template-rows: 100% auto 100% 75%;
-    }
-}
+
 /* Tablets */
-/* @media screen and (min-width: 640px) {
+@media screen and (min-width: 601px) and (min-height: 962px) {
     .a-text-one{
         font-size: 100px;
-        line-height: 1.0;
+        line-height: 0.95;
     }
-    .a-text-two, .button, nav{
-        font-size: 22px;
+    .a-text-two, .button, nav, .div-two-text-four,.text-four-text{
+        font-size: 21px;
+    }
+    #div-four-text-two, .div-text-one, .div-text-three{
+        font-size: 19px;
+    }
+    .div-text-two{
+        font-size: 48px;
+    }
+    #search-input,#search-button{
+        height: 45px;
+        font-size: 18px;
+    }
+    .button{
+        border: 1px solid orangered;
+    }
+    .div-four-button{
+        border: 1px solid white;
     }
 }
-@media screen and (min-width: 740px){
+
+@media screen and (min-width: 768px) and (min-height: 1024px){
+    #div-four-text-two, .div-text-one, .div-text-three{
+        font-size: 24px;
+    }
+    .div-text-two{
+        font-size: 59px;
+    }
+    .a-text-two, .button, nav, .div-two-text-four,.text-four-text{
+        font-size: 27px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .content-a{
+        width: 50%;
+        height: auto;
+        }
+    .content-b{
+        width: 50%;
+        height: auto;
+    }
+    .div-one-content, .div-two, .div-three{
+        flex-direction: row;
+    }
+    .maindiv{
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .div-text-one{
+        font-size: 22px;
+    }
+    .button, nav{
+        font-size: 20px;
+    }
+    .a-text-two{
+        font-size: 19px;
+    }
     .a-text-one{
-        font-size: 122px;
-        line-height: 1.0;
+        font-size: 75px;
+        line-height: 1.1;
     }
-    .a-text-two, .button, nav{
-        font-size: 26px;
+    #div-four-text-two{
+        width: 60%;
     }
-} */
+    #div-four-text-one{
+        font-size: 50px;
+    }
+    #search-input, #search-button{
+        height: 50px;
+    }
+    .div-three, .div-five{
+        flex-direction: row;
+    }
+}
+
 /* Desktops*/
 /* @media screen and (min-width: 1280px){
     .content-a{
