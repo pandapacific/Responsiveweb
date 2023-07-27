@@ -10,17 +10,28 @@
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto 70% auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
     box-sizing: border-box;
 }
 /*The first block*/
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
 .div-one{
     grid-area: 1/1/2/2;
     width: 100%;
     height: 100%;
-    background-color: hsl(351,86%, 96%);
     display: flex;
-    flex-direction: column;
+    background-color: hsl(351,86%, 96%);
     box-sizing: border-box;
 }
 nav{ 
@@ -73,7 +84,7 @@ nav{
     font-family: 'PT Sans', sans-serif;
 }
 .a-text-two{
-    font-size: 10px;
+    font-size: 13px;
     font-family: 'PT Sans', sans-serif;
     width: 80%;
     height: auto;
@@ -104,6 +115,7 @@ div.a-buttons{
     font-size: 12px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .button:visited, .button:hover, .button:active{
     background-color: orangered;
@@ -174,10 +186,11 @@ div.a-buttons{
     grid-area: 3/1/4/2;
     height: 100%;
     width: 100%;
-    margin-top: 10%;
+    padding: 10% 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    background-color: white;
 }
 .div-three-text-four{
     height: auto;
@@ -207,25 +220,25 @@ div.a-buttons{
 }
 .div-four{
     grid-area: 4/1/5/2;
-    height: 100%;
+    height: auto;
     width: 100%;
-    background-image: linear-gradient(125deg,hsl(240,100%,70%), blue);
+    background-image: linear-gradient(125deg,hsl(240,100%,70%), blue, purple);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    margin-top: 10%;
 }
 #div-four-text-one{
     color: white;
     height: auto;
     width: auto;
     text-align: center;
-    margin-bottom: 5%;
+    padding: 5% 5%;
+    margin-bottom: 2%;
 }
 #div-four-text-two{
-    color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 78%);
     height: auto;
     width: auto;
     text-align: center;
@@ -235,15 +248,17 @@ div.a-buttons{
 .div-four-button{
     border-color: white;
     color: white;
+    margin-bottom: 12%;
 }
 .div-five{
     grid-area: 5/1/6/2;
     height: auto;
     width: 100%;
-    margin-top: 20%;
+    padding-top: 20%;
     display: flex;
     flex-direction: column;
     padding: 2% 5%;
+    background-color: white;
 }
 form{
     box-sizing: border-box;
@@ -266,7 +281,130 @@ form{
     background-image: linear-gradient(125deg,hsl(240,100%,70%), blue);
     color: white;
 }
+.div-six{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 30px;
+}
+.div-six-one{
+    width: 100%;
+    height: auto;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+.div-six-two{
+    display: none;
+}
+.div-six-content{
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    flex-grow: 1;
+    border: 0px;
+    border-radius: 12px;
+    background-color: hsl(351,86%, 96%);
+    display: flex;
+    flex-direction: column;
+}
+.div-six-content-a{
+    padding: 5%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+}
+.content-b-wrap{
+    box-sizing: border-box;
+    padding: 0 4%;
+}
+.div-six-content-b{
+    box-sizing: border-box;
+    padding: 5%;
+    border: 0px;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.content-b-i{
+    padding-bottom: 3%;
+    box-sizing: border-box;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    border-bottom: 1px solid hsl(3.3, 100%, 89.3%);
+}
+.timer-logo{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.content-b-ii{
+    display: flex;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    padding-top: 3%;
+}
+.image-six{
+    width: 55px;
+    height: 55px;
+}
+.content-b-ii-text{
+    width: auto;
+    height: auto;
+    padding-left: 5%;
+}
+.text-a{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 4%;
+}
+.text-b{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 0%, 65%);
+}
+.div-six-content-c{
+    padding: 5%;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-c-i{
+    background-color: white;
+    font-family: 'PT Sans', sans-serif;
+    padding: 3% 6% ;
+    font-size: 23px;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 12px;
+}
+.content-c-ii{
+    font-size: 18px!important;
+    padding: 1.5% 6%!important;
+    height: min-content;
+    border-radius: 9px;
+}
+.div-seven{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+}
 
+
+
+/* Responsive */
 /* Mobiles */
 @media screen and (min-width: 360px) and (min-height: 780px){
     .a-text-one{
@@ -304,7 +442,7 @@ form{
     }
 }
 
-@media screen and (min-width: 768px) and (min-height: 1024px){
+@media screen and (min-width: 768px){
     #div-four-text-two, .div-text-one, .div-text-three{
         font-size: 24px;
     }
@@ -314,8 +452,43 @@ form{
     .a-text-two, .button, nav, .div-two-text-four,.text-four-text{
         font-size: 27px;
     }
+    #search-input{
+        font-size: 20px;
+    }
+    .div-six-two{
+        display: flex;
+        gap: 40px;
+    }
+    .div-six-one{padding: 2% 0 2% 3%;}
+    .div-six-two{padding: 2% 3% 2% 0;}
+    #div-six-direction{
+        gap: 30px;
+        flex-direction: row;
+    }
+    .div-one{padding-bottom: 7%;}
+    .div-two{padding-top: 7%;}
 }
 
+
+/* Desktops*/
+@media screen and (min-width: 1024px){
+    .row{ 
+        gap: 20px;
+        flex-direction: row;
+    }
+    .div-six-one{
+        padding: 2% 5%;
+        flex-direction: unset;
+        gap: 25px;
+    }
+    .div-six-two{
+        display: flex;
+    }
+    #div-six-direction{
+        gap: 0px;
+        flex-direction: column;
+    }
+}
 @media screen and (min-width: 1280px){
     .content-a{
         width: 50%;
@@ -356,19 +529,41 @@ form{
     .div-three, .div-five{
         flex-direction: row;
     }
-}
-
-/* Desktops*/
-/* @media screen and (min-width: 1280px){
-    .content-a{
-        width:50%;
-        height: 100%;
-        }
-    .content-b{
-        width:50%;
-        height: 100%;
+    #search-input{
+        font-size: 20px;
     }
-    .div-one-content{
+    #search-button{
+        font-size: 20px;
+    }
+    .div-six{
+        gap: 0px;
+        flex-direction: column;
+    }
+    .container{
+        padding: 0 120px;
+    }
+    .row{ 
+        gap: 20px;
         flex-direction: row;
     }
-} */
+}
+
+@media screen and (min-width: 2560px){
+    /* #ground-div{
+        max-width: 50%;
+    } */
+    /* body{
+        display: flex;
+        justify-content: center;
+    } */
+    .four-k{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column ;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 75%;
+    }
+}
