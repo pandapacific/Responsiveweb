@@ -97,7 +97,7 @@ nav{
     font-size: 16px;
 }
 .nav-dropdown-content a:hover,.nav-dropdown-content a:active{background-color: hsl(0, 0%, 90%);}
-.nav-dropdown:hover .nav-dropdown-content,.nav-dropdown:active .nav-dropdown-content{display: block;}
+.nav-dropdown:hover .nav-dropdown-content{display: block;}
 .nav-logo:hover,.nav-dropdown-content a:hover,.nav-menu-icon:hover{cursor: pointer;}
 .nav-menu{
     width: max-content;
