@@ -10,5 +10,18 @@
   },
   "devDependencies": {
     "vite": "^7.2.4"
-  }
+  },
+  "description": "learning web responsiveness",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandapacific/Responsiveweb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandapacific/Responsiveweb/issues"
+  },
+  "homepage": "https://github.com/pandapacific/Responsiveweb#readme"
 }
