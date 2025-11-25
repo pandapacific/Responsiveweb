@@ -13,25 +13,30 @@
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="maindiv maindiv-courses">
+        <div class="maindiv-courses">
+            <header class="div-one">
+                <section class=" container column">
+                    <nav >
+                        <a class="nav-logo" href="home.html">
+                            <img src="src/assets/logos/EDCT-black.svg" alt="logo">
+                        </a>
+                        <ul class="desktop-nav">
+                            <li><a href = "courses.html">Courses</a></li>
+                            <li><a href = "blogs.html">Blogs</a></li>
+                            <li><a data-scroll = "footer">Contact</a></li>
+                        </ul>
+                        <button class="nav-menu-icon"><img src="src/assets/icons/menu.svg" alt="#"></button>
+                    </nav>
+                    <ul class="mobile-nav hidden" >
+                        <li class="nav-menu-a"><a href="courses.html">Courses</a></li>
+                        <li class="nav-menu-b"><a href="blogs.html">Blogs</a></li>
+                        <li class="nav-menu-c"><a data-scroll = "footer">Contact</a></li>
+                    </ul>
+                </section>
+            </header>
+
             <div class="div-one div-one-courses">
                 <div class="container column">
-                    <nav>
-                        <a class="nav-logo" href="home.html"><img src="src/assets/logos/EDCT-black.svg" alt="#"></a>
-                        <div class="nav-dropdown">
-                            <a class="nav-menu-icon" href="#"><img src="src/assets/icons/menu.svg" alt="#"></a>
-                            <div class="nav-dropdown-content">
-                                <a href="Courses.html">Courses</a>
-                                <a href="Blogs.html">Blogs</a>
-                                <a href="#footer-bookmark">Contact</a>
-                            </div>
-                        </div>
-                        <ul class="nav-menu">
-                            <li class="nav-menu-a"><a href="Courses.html">Courses</a></li>
-                            <li class="nav-menu-b"><a href="Blogs.html">Blogs</a></li>
-                            <li class="nav-menu-c"><a href="#footer-bookmark">Contact</a></li>
-                        </ul>
-                    </nav>
                     <div class="div-one-content div-one-content-courses">
                         <div class="content-a">
                             <div class="a-text-one">
@@ -44,7 +49,9 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+
             </div>
 
             <div class="section">
@@ -286,5 +293,6 @@
                 </div>
             </footer>
         </div>
+        <script src="./src/main.js"></script>
     </body>
 </html>
